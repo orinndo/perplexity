@@ -17,11 +17,131 @@
             </a>
             <div class="section-badge">Section 04</div>
         </header>
+
         <div class="section-title-block">
             <h1>Nitroglycerin</h1>
             <p class="section-subtitle">ニトロペン舌下投与</p>
         </div>
-        <div class="audio-player-card">...</div>
+
+        <div class="audio-player-card">
+            <button id="playButton" class="play-button" aria-label="Play audio">
+                <svg class="play-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 8l14 8-14 8V8z" fill="white"/>
+                </svg>
+                <svg class="pause-icon hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="9" y="7" width="5" height="18" fill="white"/>
+                    <rect x="18" y="7" width="5" height="18" fill="white"/>
+                </svg>
+            </button>
+            <div class="audio-info">
+                <div class="audio-title">Audio Guide</div>
+                <div class="audio-status" id="audioStatus">Tap to play</div>
+            </div>
+        </div>
+
+        <div class="script-container">
+            <div class="script-item">
+                <div class="script-number">01</div>
+                <div class="script-text">
+                    <p class="ja">これからお薬を舌の下に入れます。心臓の血管を広げるお薬です。</p>
+                    <p class="en">We're going to put a medicine under your tongue. It helps widen the blood vessels in your heart.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">02</div>
+                <div class="script-text">
+                    <p class="ja">これは舌下錠です。舌の下で溶けるので、飲み込まないでください。</p>
+                    <p class="en">This is a sublingual tablet that dissolves under your tongue, so please don't swallow it.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">03</div>
+                <div class="script-text">
+                    <p class="ja">溶けにくい場合は、飴のようになめても構いませんが、噛まないでください。</p>
+                    <p class="en">If it's hard to dissolve, you can lick it like a candy to help it dissolved, but please don't chew or bite it.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">04</div>
+                <div class="script-text">
+                    <p class="ja">このお薬は脳の血管も広げるため、軽い頭痛を感じることがありますが、心配いりません。</p>
+                    <p class="en">This medicine can also widen the blood vessels in your brain, so you may feel a light headache, but it's nothing to worry about.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">05</div>
+                <div class="script-text">
+                    <p class="ja">多くの方は軽い頭痛ですが、強くなった場合はすぐにお知らせください。</p>
+                    <p class="en">Most patients feel just a mild headache, but if you feel the headache is getting worse, please tell us right away.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">06</div>
+                <div class="script-text">
+                    <p class="ja">お口を開けて、舌を上げてください。</p>
+                    <p class="en">Please open your mouth and lift your tongue.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">07</div>
+                <div class="script-text">
+                    <p class="ja">錠剤は飲み込まないでください。</p>
+                    <p class="en">Please don't swallow the tablet.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">08</div>
+                <div class="script-text">
+                    <p class="ja">飴のように舌の上で溶かしてください。</p>
+                    <p class="en">Let it dissolve like a candy on your tongue.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">09</div>
+                <div class="script-text">
+                    <p class="ja">お薬が溶けたら教えてください。</p>
+                    <p class="en">Please let me know when the medicine has dissolved.</p>
+                </div>
+            </div>
+
+            <div class="script-item">
+                <div class="script-number">10</div>
+                <div class="script-text">
+                    <p class="ja">溶けましたか？まだ舌の下にありますか？</p>
+                    <p class="en">Has it dissolved? Is it still there under your tongue?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <a href="section03.html" class="nav-btn secondary">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4l-8 6 8 6V4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Previous
+            </a>
+            <a href="section05.html" class="nav-btn primary">
+                Next Section
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 10h10m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
     </div>
+
+    <audio id="audioPlayer" preload="metadata">
+        <source src="audio/step_04.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
