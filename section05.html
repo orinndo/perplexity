@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>05 Contrast Dye Explanation | Coronary CT Angiography Audio Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05: Contrast Dye Explanation - CT Audio Guide</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body data-audio-src="audio/step_05.mp3">
-<header class="site-header">
-  <button class="back-link" onclick="window.location.href='index.html'">
-    ← Back
-  </button>
-  <h1>05 Contrast Dye Explanation</h1>
-  <p class="subtitle">造影剤の説明</p>
-</header>
+<body class="section-page">
+    <div class="container">
+        <header class="section-header">
+            <a href="index.html" class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18l-6-6 6-6" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+            <div class="section-badge">Section 05</div>
+        </header>
 
-<main class="main-content">
-  <section class="audio-section" aria-label="Audio guide">
-    <button class="audio-button" id="playPauseButton" aria-label="Play audio">
-      ▶ Play Audio
-    </button>
-    <p class="audio-status" id="audioStatus" aria-live="polite">
-      音声を再生するにはボタンを押してください。
-    </p>
-  </section>
+        <div class="section-title-block">
+            <h1>Contrast Dye Explanation</h1>
+            <p class="section-subtitle">造影剤の説明・チューブ接続</p>
+        </div>
 
-  <section class="script-section" aria-label="Script text">
-    <h2>Instructions</h2>
-    <!-- Word からの文章をこの中に追加してください -->
-  </section>
-</main>
+        <div class="audio-player-card">
+            <button id="playButton" class="play-button" aria-label="Play audio">
+                <svg class="play-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 8l14 8-14 8V8z" fill="white"/>
+                </svg>
+                <svg class="pause-icon hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="9" y="7" width="5" height="18" fill="white"/>
+                    <rect x="18" y="7" width="5" height="18" fill="white"/>
+                </svg>
+            </button>
+            <div class="audio-info">
+                <div class="audio-title">Audio Guide</div>
+                <div class="audio-status" id="audioStatus">Tap to play</div>
+            </div>
+        </div>
 
-<footer class="site-footer">
-  <nav class="section-nav" aria-label="Section navigation">
-    <a href="section01.html" class="section-nav-link">01</a>
-    <a href="section02.html" class="section-nav-link">02</a>
-    <a href="section03.html" class="section-nav-link">03</a>
-    <a href="section04.html" class="section-nav-link">04</a>
-    <a href="section05.html" class="section-nav-link current">05</a>
-    <a href="section06.html" class="section-nav-link">06</a>
-    <a href="section07.html" class="section-nav-link">07</a>
-    <a href="section08.html" class="section-nav-link">08</a>
-    <a href="section09.html" class="section-nav-link">09</a>
-    <a href="section10.html" class="section-nav-link">10</a>
-  </nav>
-</footer>
+        <div class="script-container">
+            <div class="script-item">
+                <div class="script-number">01</div>
+                <div class="script-text">
+                    <p class="ja">これから造影剤について説明します。</p>
+                    <p class="en">I'll walk you through the contrast dye now.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <audio id="audioPlayer" preload="metadata">
+        <source src="audio/step_05.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
 </body>
 </html>

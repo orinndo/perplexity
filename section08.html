@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>08 Test Injection | Coronary CT Angiography Audio Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08: Test Injection - CT Audio Guide</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body data-audio-src="audio/step_08.mp3">
-<header class="site-header">
-  <button class="back-link" onclick="window.location.href='index.html'">
-    ← Back
-  </button>
-  <h1>08 Test Injection</h1>
-  <p class="subtitle">テストインジェクション</p>
-</header>
+<body class="section-page">
+    <div class="container">
+        <header class="section-header">
+            <a href="index.html" class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18l-6-6 6-6" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+            <div class="section-badge">Section 08</div>
+        </header>
 
-<main class="main-content">
-  <section class="audio-section" aria-label="Audio guide">
-    <button class="audio-button" id="playPauseButton" aria-label="Play audio">
-      ▶ Play Audio
-    </button>
-    <p class="audio-status" id="audioStatus" aria-live="polite">
-      音声を再生するにはボタンを押してください。
-    </p>
-  </section>
+        <div class="section-title-block">
+            <h1>Test Injection</h1>
+            <p class="section-subtitle">テスト注入</p>
+        </div>
 
-  <section class="script-section" aria-label="Script text">
-    <h2>Instructions</h2>
-    <!-- Word からの文章をこの中に追加してください -->
-  </section>
-</main>
+        <div class="audio-player-card">
+            <button id="playButton" class="play-button" aria-label="Play audio">
+                <svg class="play-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 8l14 8-14 8V8z" fill="white"/>
+                </svg>
+                <svg class="pause-icon hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="9" y="7" width="5" height="18" fill="white"/>
+                    <rect x="18" y="7" width="5" height="18" fill="white"/>
+                </svg>
+            </button>
+            <div class="audio-info">
+                <div class="audio-title">Audio Guide</div>
+                <div class="audio-status" id="audioStatus">Tap to play</div>
+            </div>
+        </div>
 
-<footer class="site-footer">
-  <nav class="section-nav" aria-label="Section navigation">
-    <a href="section01.html" class="section-nav-link">01</a>
-    <a href="section02.html" class="section-nav-link">02</a>
-    <a href="section03.html" class="section-nav-link">03</a>
-    <a href="section04.html" class="section-nav-link">04</a>
-    <a href="section05.html" class="section-nav-link">05</a>
-    <a href="section06.html" class="section-nav-link">06</a>
-    <a href="section07.html" class="section-nav-link">07</a>
-    <a href="section08.html" class="section-nav-link current">08</a>
-    <a href="section09.html" class="section-nav-link">09</a>
-    <a href="section10.html" class="section-nav-link">10</a>
-  </nav>
-</footer>
+        <div class="script-container">
+            <div class="script-item"><div class="script-number">01</div><div class="script-text"><p class="ja">両腕を頭の上に上げてください。</p><p class="en">Please raise your arms above your head.</p></div></div>
+            <div class="script-item"><div class="script-number">02</div><div class="script-text"><p class="ja">右腕を曲げずに、できるだけまっすぐ伸ばしていてください。</p><p class="en">Please try to keep your right arm straight without bending the elbow.</p></div></div>
+            <div class="script-item"><div class="script-number">03</div><div class="script-text"><p class="ja">左腕を曲げずに、できるだけまっすぐ伸ばしていてください。</p><p class="en">Please try to keep your left arm straight without bending the elbow.</p></div></div>
+            <div class="script-item"><div class="script-number">04</div><div class="script-text"><p class="ja">安全確認のために、本番と同じ速度で生理食塩水を流してテスト注入をします。</p><p class="en">Just to make sure everything's okay, we're going to do a test injection using saline at the same speed as the actual contrast dye injection.</p></div></div>
+            <div class="script-item"><div class="script-number">05</div><div class="script-text"><p class="ja">痛みがあれば、すぐ教えてください。</p><p class="en">Please let me know if it hurts.</p></div></div>
+            <div class="script-item"><div class="script-number">06</div><div class="script-text"><p class="ja">今からテスト注入を始めます。</p><p class="en">We're starting the test injection now.</p></div></div>
+            <div class="script-item"><div class="script-number">07</div><div class="script-text"><p class="ja">痛みはありましたか？</p><p class="en">Did you feel any pain?</p></div></div>
+            <div class="script-item"><div class="script-number">08</div><div class="script-text"><p class="ja">それでは本番の注入を開始します。</p><p class="en">We'll start the actual injection.</p></div></div>
+        </div>
 
+        <div class="navigation-buttons">
+            <a href="section07.html" class="nav-btn secondary">Previous</a>
+            <a href="section09.html" class="nav-btn primary">Next Section</a>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" preload="metadata">
+        <source src="audio/step_08.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
